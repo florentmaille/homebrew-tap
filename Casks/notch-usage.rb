@@ -1,6 +1,6 @@
 cask "notch-usage" do
-  version "0.4.0-preview"
-  sha256 "723a3cf830fb38cd07e33173cbc6ad83013b117bd88e941e63e9595493c5b2fa"
+  version "0.4.1-preview"
+  sha256 "9383413d72546509b26a9f54fa02e0dbdf87faf00f42effd544b880261e726d7"
 
   url "https://github.com/florentmaille/Notch-Usage/releases/download/v#{version}/NotchUsage-#{version}.zip"
   name "Notch Usage"
@@ -31,5 +31,8 @@ cask "notch-usage" do
   caveats <<~EOS
     Notch Usage is not notarized yet. On first launch macOS blocks it: open
     System Settings → Privacy & Security and click "Open Anyway".
+
+    Sign out from the panel before uninstalling: it deletes the app's
+    Keychain entries, which `brew uninstall --zap` cannot remove.
   EOS
 end
