@@ -1,6 +1,6 @@
 cask "notch-usage" do
-  version "0.6.1-preview"
-  sha256 "71e3b69cd8af97bf5fcc77f75703adfbf63af08cd5fc2bafe34e95c98791ae34"
+  version "0.6.2-preview"
+  sha256 "a3e475e5b46b44df3d90918060c5a27bc897e354e06be0441ed705d763c68172"
 
   url "https://github.com/florentmaille/Notch-Usage/releases/download/v#{version}/NotchUsage-#{version}.zip"
   name "Notch Usage"
@@ -32,7 +32,9 @@ cask "notch-usage" do
     Notch Usage is not notarized yet. On first launch macOS blocks it: open
     System Settings → Privacy & Security and click "Open Anyway".
 
-    Sign out from the panel before uninstalling: it deletes the app's
-    Keychain entries, which `brew uninstall --zap` cannot remove.
+    Before uninstalling, in the panel: turn off "Follow Claude Code" (it
+    removes the app's hook entries from ~/.claude/settings.json; left behind,
+    they do nothing) and sign out (it deletes the app's Keychain entries,
+    which `brew uninstall --zap` cannot remove).
   EOS
 end
