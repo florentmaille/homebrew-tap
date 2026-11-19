@@ -1,6 +1,6 @@
 cask "notch-usage" do
-  version "0.6.5-preview"
-  sha256 "c27166ec834569e9a697032c2eea63fb8fbc248b7b3b5886c81de85d323c5b8a"
+  version "0.6.6-preview"
+  sha256 "b2db1c791bc880c5b9da9f17373205b025334f15f250682d3fec5f3bfe937e01"
 
   url "https://github.com/florentmaille/Notch-Usage/releases/download/v#{version}/NotchUsage-#{version}.zip"
   name "Notch Usage"
